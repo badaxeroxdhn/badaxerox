@@ -1,0 +1,168 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+	font-family: arial;
+}
+
+.container {
+	width: 800px;
+	background-color: #f0efeb;
+	margin: 50px auto;
+	border-radius: 20px;
+	padding: 20px
+}
+
+.container .key, .container .value-div .value {
+	width: 100%;
+	height: 50px;
+	font-size: 22px;
+	font-weight: bold;
+	border: 2px solid #ccc;
+	border-radius: 20px;
+	padding: 10px;
+	outline: none
+}
+
+.container .key {
+	z-index: 3;
+}
+
+.container .value-div {
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.container .value-div .value {
+	width: 70%;
+	transition: top .8s;
+	position: absolute;
+	top: -60px;
+	z-index: -1;
+}
+
+.container .value-div .add,
+.container .value-div .back,
+.container .buttons .check,
+.container .buttons .delete,
+.container .buttons .delete-all,
+.container .buttons .set,
+.container .buttons .get {
+	display: inline-block;
+	color: #fff;
+	background-color: #2b9348;
+	padding: 15px;
+	border-radius: 20px;
+	user-select: none;
+	font-weight: bold;
+	cursor: pointer
+}
+
+.container .buttons .delete-all {
+	height: 45px;
+	margin-top: 6px
+}
+
+.container .value-div .add, .container .value-div .back {
+	transition: top .8s;
+	margin-left: 540px;
+	position: absolute;
+	top: -60px;
+	z-index: -1;
+}
+
+.container .value-div .back {
+	margin-left: 680px;
+	background-color: brown;
+}
+
+.container .value-div .add:hover,
+.container .buttons .check:hover,
+.container .buttons .delete:hover,
+.container .buttons .delete-all:hover,
+.container .buttons .set:hover,
+.container .buttons .get:hover {
+	background-color: #fff;
+	color: #2b9348;
+	border: 2px solid #ccc;
+}
+
+.container .value-div .back:hover {
+	color: brown;
+	background-color: #fff;
+	border: 2px solid brown;
+}
+
+.container .buttons {
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background-color: #f8f9fa;
+	border-radius: 20px;
+	height: 80px;
+	margin-top: -10px
+}
+
+.container .buttons .check,
+.container .buttons .delete,
+.container .buttons .set,
+.container .buttons .get {
+	line-height: 1;
+	height: 45px;
+	margin-top: 8px
+	
+}
+
+.container .result {
+	background-color: #f8f9fa;
+	margin-top: 20px;
+	min-height:  40px;
+	padding: 15px;
+	border: 2px dashed #ccc
+}
+
+.container .result > span {
+	font-size: 20px;
+	font-weight: bold;
+	color: rgb(59, 59, 59, .8)
+}
+
+.container .result > span span {
+	font-size: 20px;
+	font-weight: bold;
+	color: brown
+}
+
+.container .result > span .keys {
+	display: block;
+	color: #fff;
+	background-color: #2b9348;
+	user-select: none;
+	text-align: center;
+	box-shadow: 2px 2px 2px #ccc;
+	border-radius: 20px;
+	padding: 10px;
+	margin-bottom: 8px;
+	font-size: 16px
+
+}
+
+.container .value-div .value.show-input, 
+.container .value-div .add.show-span,
+.container .value-div .back.show-span {
+	z-index: 4;
+	top: 0px;
+	margin-top: 5px;
+}
+
+
+.container .buttons.hide {
+	display: none;
+}
+
+.container .result.special {
+	margin-top: 52px;
+}

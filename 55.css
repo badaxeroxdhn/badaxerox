@@ -1,0 +1,102 @@
+/* HBO is copyrighted by WarnerMedia Direct, LLC. For testing purposes only. */
+/* Background stuff */
+.container {
+  background: #9a35ef;
+  background: linear-gradient(135deg, #9a35ef, #4b00c4, #651ca3);
+  height: 100vh;
+  padding-top: 35vh;
+}
+
+/* Title */
+h1 {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-wight: 400;
+}
+h1 span {
+  letter-spacing: -5px;
+  font-size: 2em;
+  font-wight: 700;
+}
+h1 span span {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Loading Area */
+.loading {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Delay subsequent balls. Must adjust if you change animation-duration above */
+}
+.loading .ball {
+  /* Set ball size */
+  opacity: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: white;
+  /* Shadow gives the look of a sphere */
+  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  animation-name: load;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.loading .ball:nth-child(2) {
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+.loading .ball:nth-child(3) {
+  animation-delay: 1s;
+  opacity: 0;
+}
+.loading .ball:nth-child(4) {
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+.loading .ball:nth-child(5) {
+  animation-delay: 2s;
+  opacity: 0;
+}
+
+/* 
+Animation Key frames - Balls are loaded with 0 opacity and actually don't start until animation-delay is up.
+Revolve around the Y axis with a radius of 35px.
+rotateX gives a feel of slightly above it.
+Increasing to 45px on the front size give an interesting whip effect
+Then negative rotate to keep it facing forward. It is after all just a 2d circle.
+Slightly scale to enhance 3D effect.
+Reduce opacity when in the back.
+*/
+@keyframes load {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg) rotateX(-10deg) translateZ(35px) rotateY(90deg) scale3d(1, 1, 1);
+  }
+  25% {
+    opacity: 1;
+    transform: rotateY(0deg) rotateX(-15deg) translateZ(45px) rotateY(0deg) scale3d(1.1, 1.1, 1.1);
+  }
+  50% {
+    opacity: 0.2;
+    transform: rotateY(90deg) rotateX(-10deg) translateZ(45px) rotateY(-90deg) scale3d(1, 1, 1);
+  }
+  75% {
+    opacity: 0;
+    transform: rotateY(180deg) rotateX(0deg) translateZ(45px) rotateY(-180deg) scale3d(0.9, 0.9, 0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(270deg) rotateX(0deg) translateZ(35px) rotateY(-270deg) scale3d(1, 1, 1);
+  }
+}

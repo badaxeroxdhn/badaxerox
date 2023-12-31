@@ -1,0 +1,145 @@
+
+
+.form-container {
+  box-shadow: 0px 0px 12px 5px rgba(185, 129, 207, 0.2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.custom-card {
+  background: linear-gradient(40deg, #FEAC5E, #C779D0, #4BC0C8);
+  color: #fff;
+}
+.custom-card.active {
+  background: #fff;
+  color: #333;
+}
+
+.custom-card-body {
+  display: grid;
+  place-items: center;
+  width: 80%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 6rem;
+  margin: 0 auto;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #eeeeee;
+  margin: 0 0.5rem;
+  display: grid;
+  place-items: center;
+  transition: all 0.1s ease-in-out;
+}
+.circle:hover {
+  border-color: #4BC0C8;
+}
+.circle:hover > * {
+  color: #4BC0C8;
+}
+.circle > * {
+  transition: all 0.1s ease-in-out;
+  color: rgba(51, 51, 51, 0.7);
+}
+
+.form .input-group input:valid ~ label, .form .input-group input:focus ~ label {
+  top: -1.3rem;
+  left: -0.5rem;
+  transform: scale(0.8);
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.form .input-group {
+  margin: 1rem 0;
+  width: 80%;
+  position: relative;
+}
+.form .input-group input {
+  background: #eeeeee;
+  border: 0;
+  border-radius: 0;
+  color: #333;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border-radius: 2rem;
+}
+.form .input-group input:focus {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+}
+.form .input-group label {
+  position: absolute;
+  top: 0.7rem;
+  left: 1.5rem;
+  color: rgba(51, 51, 51, 0.7);
+  transition: all 0.1s ease;
+}
+
+.btn {
+  display: block;
+  padding: 0.8rem 1rem;
+  text-decoration: none;
+  color: #333;
+  width: 200px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.09rem;
+  transition: all 0.1s ease-in-out;
+}
+.btn-primary {
+  border-radius: 2rem;
+  color: #fff;
+  background: #4BC0C8;
+  border-color: #4BC0C8;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background: #34a4ac !important;
+  border-color: #34a4ac !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-primary:active {
+  transform: scale(0.85);
+}
+.btn-outline-white {
+  border-radius: 2rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid #fff;
+}
+.btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus {
+  background: transparent !important;
+  color: #fff !important;
+  border-color: #fff !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.btn-outline-white:active {
+  transform: scale(0.85);
+}
+
+.text-dark {
+  color: #333;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-cta {
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}

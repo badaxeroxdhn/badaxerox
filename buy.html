@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bada Xerox</title>
+	
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+            .register .nav-tabs .nav-link:hover{
+                border: none;
+            }
+            .text-align{
+                margin-top: -3%;
+                margin-bottom: -9%;
+
+                padding: 10%;
+                margin-left: 30%;
+            }
+            .form-new{
+                margin-right: 22%;
+                margin-left: 20%;
+            }
+            .register-heading{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register-heading h1{
+                margin-left: 21%;
+                margin-bottom: 10%;
+                color: #e9ecef;
+            }
+            .register{
+                background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+                margin-top: 3%;
+                padding: 3%;
+                border-radius: 2.5rem;
+            }
+            .btnSubmit
+            {
+                width: 50%;
+                border-radius: 1rem;
+                padding: 1.5%;
+                color: #fff;
+                background-color: #03612e;
+                border: none;
+                cursor: pointer;
+                margin-right: 6%;
+                color: rgb(246, 246, 252);
+                margin-top: 4%;
+            }
+    </style>
+
+</head>
+<body>
+    
+<div class="container register">
+            <div class="row">
+                <div class="col-md-12">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <h3 class="register-heading">Bada Xerox Entry</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group">
+                                            <input type="number" id="password" readonly name="Bill No" class="form-control"  required=""/>       <input  id="button" class="btnSubmit btn-block"maxlength="1" size="1" class="btn1"onclick="genPassword()"style="background-color:red;" class="btnSubmit btn-block" value="Get Bill No." readonly />
+											
+											
+											
+											          <script>
+    var password=document.getElementById("password");
+    function genPassword() {
+        var chars = "0123456789";
+        var passwordLength = 6;
+        var password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+            var randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars.substring(randomNumber, randomNumber +1);
+        }
+        document.getElementById("password").value = password;
+
+    }
+    function copyPassword() {
+  var copyText = document.getElementById("password");
+  copyText.select();
+  copyText.setSelectionRange(0, 999);
+  document.execCommand("copy");
+  
+}
+
+</script>
+											
+                                        </div>
+                                        <div class="form-group">
+                                           
+										
+											<input id="date" name="Date"class="form-control" readonly required=""/>
+
+<script type="text/javascript">
+  document.getElementById('date').value = Date();
+</script>
+											
+											
+											
+											
+											
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="Item"class="form-control">
+                                                 <option> Choose Menu  *</option>
+												 
+                                             <option value="A0 Paper">A0 Paper</option>
+                                             <option value="A1 Paper">A1 Paper</option>
+                                              <option value="A2 Paper">A2 Paper</option>
+	                                           <option value="A3 Paper">A3 Paper</option>
+											    <option value="A4 Paper">A4 Paper</option>
+												  <option value="Trading paper">Trading paper</option>
+												  <option value=" A4 Trading paper">A4 Trading paper</option>
+												 <option value="Legal Paper ">Legal Paper</option>
+												  <option value="Photo Paper">Photo Paper</option>
+												   <option value="Bond Paper">Bond Paper</option>
+												    <option value="Color Paper">Color Paper</option>
+													 <option value="Other Paper">Other Paper</option>
+													 
+													    <option value="A0 Lamination"> Lamination A0</option>
+                                             <option value="A1 Lamination"> Lamination A1</option>
+                                              <option value="A2 Lamination"> Lamination A2</option>
+	                                           <option value="A3 Lamination"> Lamination A3</option>
+											    <option value="A4 Lamination"> Lamination A4</option>
+												<option value="ID Lamination"> Lamination ID</option>
+												<option value="Admit Lamination"> Lamination Admit</option>
+												<option value="Admit-L Lamination"> Lamination Admit-L</option>
+												<option value="Other Lamination"> Lamination Other</option>
+												
+												
+												<option value="Stapler Pin-S"> Stapler Pin-S</option>
+												<option value="Stapler Pin-B"> Stapler Pin-B</option>
+												<option value="Stapler-S New"> Stapler-S New</option>
+												<option value="Stapler-B New"> Stapler-B New</option>
+											    <option value="Rubber Band"> Rubber Band</option>
+											    <option value="Toner Refilling"> Toner Refilling</option>
+											    <option value="Machine"> Machine Repair</option>
+														<option value="PVC Card"> PVC Card</option>
+														
+									
+												
+												
+												
+													 
+                                                 </select>
+                                        </div>
+										<div class="form-group">
+                                            <input type="text" name="Qty" class="form-control" placeholder="Qty  *"  required=""/>
+                                        </div>
+										<div class="form-group">
+                                            <input type="number" name="Rate" class="form-control" placeholder="Rate & Price *" required=""/>
+                                        </div>
+										
+											<div class="form-group">
+                                            <select name="Remark"class="form-control"required=""/>
+                                                 <option> Choose Option  *</option>
+												 
+                                             <option value="Sale">Sale</option>
+											 <option value="Purchase ">Purchase </option>
+                                             
+									
+												
+												
+												
+													 
+                                                 </select>
+                                        </div>
+										
+                                        <div class="form-group">
+                                            <input type="submit" name="submit" class="btnSubmit btn-block" value=" Update" />
+                                        </div>
+                                    </form>
+					
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+          
+          <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw-wGnewb7lnTF9s5QYtBHpl-kDp5hHKEo8o7EJ6b4LEm2kFxzZkpMh4YmCLNkIxX9i/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting in Bada Xerox..! ..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+</html>
+            

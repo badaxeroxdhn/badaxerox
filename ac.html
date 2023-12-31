@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bada Xerox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./zzz.css">
+
+<style>
+
+
+.button4 {border-radius: 100px;}
+
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+  
+  <button
+                      type="submit"
+                      
+					  onclick="aabrirWhatsapp()"
+                      class="button button4"
+                      value="Submit"
+                    ><img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp"><span<span class="material-icons">File Send</span>
+					 </button>
+					 
+<!-- partial -->
+  <script>   
+  function aabrirWhatsapp() {
+      var Name = document.getElementById("Name").value;
+
+      var url = "https://wa.me/91917004903727?text=" // Seu numero
+        + "*Welcome to Bada Xerox*" + "%0a"
+		+ "*By SSLNT*" + "%0a"
+		// Mensagem personalizada
+        + "%0a" // Quebra de linha
+        + "*Name*: " + Name + "%0a" // Dados do formulário
+
+        + "*https://badaxeroxdhn.firebaseapp.com/*" + "%0a"
+		+ "*Regarding*" + "%0a"
+		+ "*Bada Xerox*" + "%0a"
+
+
+      window.open(url, '_blank').focus();
+    }</script>
+	
+
+
+
+
+
+</body>
+</html>

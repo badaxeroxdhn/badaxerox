@@ -1,0 +1,60 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.wrapper .container .notification {
+  position: fixed;
+  top: 100px;
+  width: 350px;
+  right: -376px;
+  background: rgba(245, 245, 245, 0.9);
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #d2d2d2;
+  padding: 12px;
+  font-family: Arial;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.wrapper .container .notification .container-image {
+  margin-right: 12px;
+}
+.wrapper .container .notification .container-image img {
+  width: 100px;
+  height: auto;
+}
+.wrapper .container .notification .container-information {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .container .notification .place {
+  display: flex;
+  flex-direction: row;
+}
+.wrapper .container .notification .place span.flag {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+.wrapper .container .notification .place span.flag img {
+  width: 16px;
+  display: block;
+}
+.wrapper .container .notification .place span.country {
+  margin-right: 6px;
+}
+.wrapper .container .notification .place span.airport {
+  margin-left: 6px;
+}
+.wrapper .container .notification span.title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1191f4;
+}
+.wrapper .container .notification span.parking {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
