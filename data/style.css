@@ -1,0 +1,215 @@
+/* menu */
+.menu-wrapper, .menu a{
+    background-color: Tomato;
+    width: 100%;
+    color: #fff;
+}
+
+.menu::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.menu a{
+    display: block;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.menu li{
+    position: relative;
+}
+
+.menu > li{
+    float: left;
+}
+
+.menu, .menu ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu ul li+li{
+    border-top: 1px solid #fff;
+}
+
+.menu ul{
+    position: absolute;
+    box-shadow:  5px 5px 10px 0 rgba(0,0,0, 0.5);
+}
+
+.menu > li ul, .menu ul ul{
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.menu > li ul{
+    top: 130%;
+    left: 0;
+}
+
+.menu ul ul{
+    left: 130%;
+    top: 0;
+}
+
+.menu ul a{
+    width: 250px;
+}
+
+.menu > li:hover > ul{
+    top: 100%;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+}
+
+.menu ul > li:hover > ul{
+    left: 100%;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+}
+
+/* color set */
+.menu-gray, .menu-gray a{
+    background-color: #CCC;
+    color: #222;
+}
+.menu-gray a:hover{
+    background-color: #BBB;
+    color: #222;
+}
+
+.menu-tomato, .menu-tomato a{
+    background-color: Tomato;
+    color: #FFF;
+}
+.menu-tomato a:hover{
+    background-color: #ff3c1a;
+    color: #FFF;
+}
+
+.menu-dodgerblue, .menu-dodgerblue a{
+    background-color: dodgerblue;
+    color: #FFF;
+}
+.menu-dodgerblue a:hover{
+    background-color: #0080ff;
+    color: #FFF;
+}
+
+.menu-gold, .menu-gold a{
+    background-color: gold;
+    color: #000;
+}
+.menu-gold a:hover{
+    background-color: #e6c300;
+    color: #000;
+}
+
+.menu-limegreen, .menu-limegreen a{
+    background-color: limegreen;
+    color: #fff;
+}
+.menu-limegreen a:hover{
+    background-color: #28a428;
+    color: #fff;
+}
+
+.menu-crimson, .menu-crimson a{
+    background-color: crimson;
+    color: #fff;
+}
+.menu-crimson a:hover{
+    background-color: #bb1133;
+    color: #fff;
+}
+
+.menu-cadetblue, .menu-cadetblue a{
+    background-color: CadetBlue;
+    color: #fff;
+}
+.menu-cadetblue a:hover{
+    background-color: #4d7e80;
+    color: #fff;
+}
+
+.menu-indigo, .menu-indigo a{
+    background-color: indigo;
+    color: #fff;
+}
+.menu-indigo a:hover{
+    background-color: #3b0066;
+    color: #fff;
+}
+
+.menu-magenta, .menu-magenta a{
+    background-color: magenta;
+    color: #fff;
+}
+.menu-magenta a:hover{
+    background-color: #cc00cc;
+    color: #fff;
+}
+
+.menu-darkkhaki, .menu-darkkhaki a{
+    background-color: darkkhaki;
+    color: #fff;
+}
+.menu-darkkhaki a:hover{
+    background-color: #b0a94f;
+    color: #fff;
+}
+
+.menu-sandybrown, .menu-sandybrown a{
+    background-color: sandybrown;
+    color: #fff;
+}
+.menu-sandybrown a:hover{
+    background-color: #f29340;
+    color: #fff;
+}
+
+.menu-hotpink, .menu-hotpink a{
+    background-color: hotpink;
+    color: #fff;
+}
+.menu-hotpink a:hover{
+    background-color: #ff3399;
+    color: #fff;
+}
+
+/* remove this css it's only for styling the table output */
+body{
+    background: lighblue;
+}
+
+table{
+    table-layout: fixed;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    margin-top: 3%;
+    width: 100%;
+}
+
+table td{
+    padding: 30px 10px;
+}
+
+h1{
+    text-align: center;
+    font-family: arial;
+    margin-top: 20px;
+}
+/* ends */
