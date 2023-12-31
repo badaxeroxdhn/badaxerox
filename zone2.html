@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bada Xerox</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style00.css">
+<link rel="stylesheet" href="./style5555.css">
+<script>
+
+(function(window, document, undefined) {
+	"use strict";
+
+	function main() {
+		var brands = document.getElementById("laptopBrands"),
+			other = document.getElementById("other");
+
+		brands.addEventListener("change", function() {
+			if (brands.selectedIndex === brands.options.length - 1 &&
+				other.classList.contains("hidden")) {
+				other.classList.remove("hidden");
+			} else if (!other.classList.contains("hidden")) {
+				other.classList.add("hidden");
+				other.value = "";
+			}
+		}, false);
+	}
+
+	window.addEventListener("load", main, false);
+
+})(window, document);
+
+</script>
+<style>
+
+
+			.hidden {
+				display: none;
+			}
+			
+			fieldset,
+			nav {
+				margin: 0 auto;
+				width: 336px;
+			}
+			
+			nav {
+				padding: 10px 0;
+			}
+			
+			fieldset > p {
+				margin: 10px 0;
+			}
+			
+			ul {
+				margin: 0;
+				padding: 0;
+				display: block;
+				text-align: center;
+			}
+			
+			li {
+				display: inline-block;
+			}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<center>
+<br><br>
+<div class="container">
+  <h3>
+    <a  target="_blank">Bada Xerox</a></h3>
+	<img src="logo.png"  width="70" height="70" style="vertical-align:top"><br><br>
+  
+<form class="gform pure-form pure-form-stacked" method="POST" data-email="5050anil@gmail.com"
+  action="https://script.google.com/macros/s/AKfycbxkAaZ3ouOtzD6YqrObCJwnsyztiBA_Uh-yqa5QvU9ZDtx9igMkdEpRy3GvJQA7woQURg/exec">
+<div class="thankyou_message" style="display:none;background:"><br><br>
+      <b>Thanks for Successfully.. us!</b>
+     
+    </div>
+<div class="form-row">
+  <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Bill No *</div>
+    </div>
+                                                    <input type="text" class="form-control"id="password" name="Bill No"required>
+		<input  id="button" class="btn btn-primary mb-2"maxlength="3" size="1" class="btn1"onclick="genPassword()"style="background-color:black;" class="btnSubmit btn-block" value="Get " readonly />
+																			
+											
+											          <script>
+    var password=document.getElementById("password");
+    function genPassword() {
+        var chars = "0123456789";
+        var passwordLength = 3;
+        var password = "";
+        for (var i = 0; i <= passwordLength; i++) {
+            var randomNumber = Math.floor(Math.random() * chars.length);
+            password += chars.substring(randomNumber, randomNumber +1);
+        }
+        document.getElementById("password").value = password;
+
+    }
+    function copyPassword() {
+  var copyText = document.getElementById("password");
+  copyText.select();
+  copyText.setSelectionRange(2, 1000000000);
+  document.execCommand("copy");
+  
+}
+
+</script>
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+    <div class="invalid-tooltip">
+          Sale Bill No
+        </div>
+  </div>
+<div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Date</div>
+    </div>
+                                                      <input type="datetime-local"class="form-control" id="date" name="Date"class="form-control"   required>
+													  <script type="text/javascript">
+  document.getElementById('date').value = Date();
+</script>
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+  <div class="invalid-tooltip">
+          Please enter Date
+        </div>
+  </div>
+  </div>
+  <div class="form-row">
+     <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Items</div>
+    </div>
+	
+	                                  <select class="form-control"  name="Item" id="laptopBrands">
+			                                    <option value="">- Select Menu  -</option>
+												
+				                              <option value="A0 Paper">A0 Paper</option>
+                                             <option value="A1 Paper">A1 Paper</option>
+                                              <option value="A2 Paper">A2 Paper</option>
+	                                           <option value="A3 Paper">A3 Paper</option>
+											    <option value="A4 Paper">A4 Paper</option>
+												  <option value="Trading paper">Trading paper</option>
+											   <option value=" A4 Trading paper">A4 Trading paper</option>
+											   <option value="Legal Paper ">Legal Paper</option>
+											   <option value="Photo Paper">Photo Paper</option>
+											   <option value="Bond Paper">Bond Paper</option>
+											  <option value="Color Paper">Color Paper</option>
+										      <option value="A0 Lamination"> Lamination A0</option>
+                                              <option value="A1 Lamination"> Lamination A1</option>
+                                              <option value="A2 Lamination"> Lamination A2</option>
+	                                           <option value="A3 Lamination"> Lamination A3</option>
+											    <option value="A4 Lamination"> Lamination A4</option>
+												<option value="ID Lamination"> Lamination ID</option>
+												<option value="Admit Lamination"> Lamination Admit</option>
+												<option value="Admit-L Lamination"> Lamination Admit Marksheet</option>
+												<option value="Stapler Pin-S"> Stapler Pin-S</option>
+												<option value="Stapler Pin-B"> Stapler Pin-B</option>
+												<option value="Stapler-S New"> Stapler-S New</option>
+												<option value="Stapler-B New"> Stapler-B New</option>
+											    <option value="Rubber Band"> Rubber Band</option>
+												<option value="Sprial Sheet Blue"> Sprial Sheet Blue</option>
+												<option value="Sprial Sheet White"> Sprial Sheet White</option>
+												<option value="Sprial Ring"> Sprial Ring</option>
+											    <option value="Toner Refilling"> Toner Refilling</option>
+											    <option value="PVC Card"> PVC Card</option>
+				                                 <option value="Other Item">Other Item</option>
+			                                      </select>
+	                                        <input type="text" name="Item Other" id="other" class="hidden" placeholder="Enter Item"><br>
+	
+     
+	 
+                                             
+														
+									
+												
+												
+												
+													 
+                                                 
+	
+	
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+       <div class="invalid-tooltip">
+          Please Select Menu
+        </div>
+  </div>
+<div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Qty</div>
+    </div>
+    <input type="number" class="custom-select"name="Qty" required>
+      
+  </select>
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+  <div class="invalid-tooltip">
+          Please  Qty 
+        </div>
+  </div>
+  <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Menu</div>
+    </div>
+   <select class="form-control"  name="Menu" id="laptopBrands1">
+	<option value="">- Select Menu  -</option>
+												 
+                                             <option value="Packet">Packet</option>
+											 <option value="Peti">Peti</option>
+											 <option value="Roll">Roll</option>
+											  <option value="Packet 1/2">Packet 1/2</option>
+											  <option value="Pics">Pics</option>
+											  <option value="KG">Kg</option>
+											  <option value="Kg 1/2">Kg 1/2</option>
+											  <option value="Gram">Gram</option>
+											  <option value="Other Menu">Other</option>
+      
+  </select>
+  
+  
+			
+				
+			</select>
+	<input type="text" name="Menu Other" id="other1" class="hidden" placeholder="Enter Menu"><br>
+	
+  
+	
+	
+	<script>
+
+(function(window, document, undefined) {
+	"use strict";
+
+	function main() {
+		var brands = document.getElementById("laptopBrands1"),
+			other = document.getElementById("other1");
+
+		brands.addEventListener("change", function() {
+			if (brands.selectedIndex === brands.options.length - 1 &&
+				other.classList.contains("hidden")) {
+				other.classList.remove("hidden");
+			} else if (!other.classList.contains("hidden")) {
+				other.classList.add("hidden");
+				other.value = "";
+			}
+		}, false);
+	}
+
+	window.addEventListener("load", main, false);
+
+})(window, document);
+
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+  <div class="invalid-tooltip">
+          Please  Menu 
+        </div>
+  </div>
+  
+  
+  </div>
+  <div class="form-row">
+         <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Rate</div>
+    </div>
+<input type="number" name="Rate" class="form-control" required>
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+           </div>
+           <div class="invalid-tooltip">
+          Please Rate 
+        </div>
+  </div>
+         <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Remark</div>
+    </div>
+    <select class="form-control" name="Remark" required>
+	<option value="">- Select Remark  -</option>
+	
+	 <option value="Sale">Sale</option>
+											 <option value="Purchase ">Purchase </option>
+											 
+                                             
+									
+												
+												
+												
+													 
+                                                 </select>
+                                        
+	
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+           <div class="invalid-tooltip">
+          Please Remark
+        </div>
+		
+  </div>
+  
+  <div class="input-group col-md-4 mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Shop Name</div>
+    </div>
+                                               <select class="form-control" name="Shop Name" id="laptopBrands2">
+	                                                  <option value="">- Buy Shop -</option>
+	
+	                                               <option value="SSLNT">SSLNT</option>
+											 <option value="LUCKY">LUCKY </option>
+											 <option value="NEELESH ">NEELESH </option>
+											 <option value="ANISH ">ANISH </option>
+											 <option value="Other Shop ">Other Shop </option>
+                                             
+									
+												
+												
+												
+													 
+                                                 </select>
+												 
+												 
+	                                             <input type="text" name="Shop Other" id="other2" class="hidden" placeholder="Shop Name"><br>
+	
+	
+								<script>
+
+(function(window, document, undefined) {
+	"use strict";
+
+	function main() {
+		var brands = document.getElementById("laptopBrands2"),
+			other = document.getElementById("other2");
+
+		brands.addEventListener("change", function() {
+			if (brands.selectedIndex === brands.options.length - 1 &&
+				other.classList.contains("hidden")) {
+				other.classList.remove("hidden");
+			} else if (!other.classList.contains("hidden")) {
+				other.classList.add("hidden");
+				other.value = "";
+			}
+		}, false);
+	}
+
+	window.addEventListener("load", main, false);
+
+})(window, document);
+
+</script>				 
+												 	
+                                        
+	
+  <div class="valid-tooltip">
+        Ok Bada Xerox !!☺️
+      </div>
+           <div class="invalid-tooltip">
+          Please Shop Name
+        </div>
+		
+  </div>
+  
+  </div>
+  
+  
+   
+  <button type="submit" class="action-btn" class="btn btn-primary mb-2"id="login-btn" ><b>Submit</b></button>
+  
+  
+  
+  
+	
+  </form>
+  <br>
+  <button onClick="window.location.reload();"class="btn btn-primary mb-2"style="background-color:black" >Re-Entry</button>
+  <a href="sale2.html"><img src="bt.jpg"  width="60" height="38" style="vertical-align:top"> </a>
+  <script data-cfasync="false" type="text/javascript">
+    
+   (function() {
+  function validEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+
+  function validateHuman(honeypot) {
+    if (honeypot) {
+      console.log("Robot Detected!");
+      return true;
+    } else {
+      console.log("Welcome Human!");
+    }
+  }
+  function getFormData(form) {
+    var elements = form.elements;
+
+    var fields = Object.keys(elements).filter(function(k) {
+          return (elements[k].name !== "honeypot");
+    }).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      }else if(elements[k].length > 0){
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
+
+    var formData = {};
+    fields.forEach(function(name){
+      var element = elements[name];
+      formData[name] = element.value;
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
+        }
+        formData[name] = data.join(', ');
+      }
+    });
+
+    // add form-specific values into the data
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+    console.log(formData);
+    return formData;
+  }
+
+  function handleFormSubmit(event) {  
+    event.preventDefault();           
+    var form = event.target;
+    var data = getFormData(form);         
+    if( data.email && !validEmail(data.email) ) {   
+      var invalidEmail = form.querySelector(".email-invalid");
+      if (invalidEmail) {
+        invalidEmail.style.display = "block";
+        return false;
+      }
+    } else {
+      disableAllButtons(form);
+      var url = form.action;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+          console.log(xhr.status, xhr.statusText);
+          console.log(xhr.responseText);
+          var formElements = form.querySelector(".form-elements")
+          if (formElements) {
+            formElements.style.display = "none"; // hide form
+          }
+          var thankYouMessage = form.querySelector(".thankyou_message");
+          if (thankYouMessage) {
+            thankYouMessage.style.display = "block";
+          }
+          return;
+      };
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      }).join('&');
+      xhr.send(encoded);
+    }
+  }
+  
+  function loaded() {
+    console.log("Contact form submission handler loaded successfully.");
+    var forms = document.querySelectorAll("form.gform");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+    }
+  };
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
+})();
+
+
+  </script>
+</center>
+</div>
+</center>
+<!-- partial -->
+  <script  src="./script00.js"></script>
+
+		  <script  src="./script555.js"></script>
+</body>
+</html>

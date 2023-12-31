@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Bada Xerox</title>
+  <link rel="stylesheet" href="./zzz.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Bada Xerox</h1><br>
+<a >SSLNT College, Near Mada Office</a><br>
+
+  <form >
+    <input type="text" name="Name" id="Name" placeholder="Your Name Is..." required><br>
+  </form>
+  <button
+                      type="submit"
+                      
+					  onclick="aabrirWhatsapp()"
+                      class="btnSubmit btn-block"
+                      value="Submit"
+                    ><img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp"><span>Send SSLNT</span>
+					 </button>
+					 <button
+                      type="submit"
+                      
+					  onclick="babrirWhatsapp()"
+                      class="btnSubmit btn-block"
+                      value="Submit"
+                    ><img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp"><span>Send Neelesh</span>
+					 </button>
+					 <button
+                      type="submit"
+                      
+					  onclick="cabrirWhatsapp()"
+                      class="btnSubmit btn-block"
+                      value="Submit"
+                    ><img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp"><span>Send Court More</span>
+					 </button>
+  
+<!-- partial -->
+  <script>   
+  function aabrirWhatsapp() {
+      var Name = document.getElementById("Name").value;
+
+      var url = "https://wa.me/916205006586?text=" // Seu numero
+        + "*Welcome to Bada Xerox*" + "%0a" // Mensagem personalizada
+        + "%0a" // Quebra de linha
+        + "*Name*: " + Name + "%0a" // Dados do formulário
+        + "*https://badaxeroxdhn.firebaseapp.com/*" + "%0a"
+		+ "*Regarding*" + "%0a"
+		+ "*Bada Xerox*" + "%0a"
+
+
+      window.open(url, '_blank').focus();
+    }</script>
+	<script>   function babrirWhatsapp() {
+      var Name = document.getElementById("Name").value;
+
+      var url = "https://wa.me/916205006586?text=" // Seu numero
+        + "*Welcome to Bada Xerox*" + "%0a" // Mensagem personalizada
+        + "%0a" // Quebra de linha
+        + "*Name*: " + Name + "%0a" // Dados do formulário
+        + "*https://badaxeroxdhn.firebaseapp.com/*" + "%0a"
+		+ "*Regarding*" + "%0a"
+		+ "*Bada Xerox*" + "%0a"
+
+
+      window.open(url, '_blank').focus();
+    }</script>
+<script>   function cabrirWhatsapp() {
+      var Name = document.getElementById("Name").value;
+
+      var url = "https://wa.me/916205006586?text=" // Seu numero
+        + "*Welcome to Bada Xerox*" + "%0a" // Mensagem personalizada
+        + "%0a" // Quebra de linha
+        + "*Name*: " + Name + "%0a" // Dados do formulário
+        + "*https://badaxeroxdhn.firebaseapp.com/*" + "%0a"
+		+ "*Regarding*" + "%0a"
+		+ "*Bada Xerox*" + "%0a"
+
+
+      window.open(url, '_blank').focus();
+    }</script>
+
+
+
+</body>
+</html>

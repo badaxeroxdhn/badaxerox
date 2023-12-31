@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Bada Xerox</title>
+  <link rel="stylesheet" href="PROMO.css">
+
+</head>
+<body>
+
+<div class="present" id="present">
+      <div class="lid">
+        <span></span>
+      </div>
+      <div class="promo">
+	  <div id="app">
+	   <p></p>
+        <p>Bada Xerox Is {{ sale }}% off promo</p>
+		 <input class="form-control" id="search" value="" onchange="ouvrirPage()"type="text" v-model="promo" placeholder="Enter promo code"/>
+    	
+       <input type="button" id="button" onclick="ouvrirPage()" value="Apply">
+	   <script>
+        function ouvrirPage() {
+            var a = document.getElementById("search").value;
+
+            if (a === "BADAXEROXX") {
+                window.open("billinvoice10.html");
+            }
+
+            if (a === "BADAXEROXV") {
+                window.open("billinvoice5.html");
+            }
+
+            if (a === "BADAXEROXXX") {
+                window.open("billinovice20.html");
+            }
+
+
+        }
+    </script>
+
+ 
+</div>
+	
+		
+      </div>
+      <div class="box">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+	
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js'></script><script>const present = document.getElementById("present");
+const options = {
+  colors: [
+    "#34D963",
+    "#068C2C",
+    "#FF5757",
+    "#8C1414",
+    "#D9D74A",
+    "#1E91D9",
+    "#1B608C",
+  ],
+};
+
+present.addEventListener("mouseenter", () => {
+  confetti(options);
+});
+present.addEventListener("touchstart", () => {
+  confetti(options);
+});</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js'></script><script>function getSale(code){
+	let codes = {
+		BADAXEROXX: 10,
+		BADAXEROXXX: 20,
+		BADAXEROXV: 5
+	};
+	
+	let sale = ( codes[code] != undefined) ? codes[code] : 0;
+	
+	return sale;
+
+}
+
+new Vue ({
+	el: '#app',
+	data: {
+		promo: '',
+		showText: true
+	},
+	computed:{
+		sale(){
+			return getSale( this.promo );
+		}
+	}
+});</script>
+
+
+</body>
+</html>

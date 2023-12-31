@@ -1,0 +1,149 @@
+body,html{
+  padding:0px;
+  margin:0px;
+}
+body{
+  padding-top:40px;
+}
+.some-page-wrapper {
+  background-color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; 
+  
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex: 1;
+ justify-content: center;
+  margin: 10px;
+}
+.item{
+  width:150px;
+  height:150px !important;
+  border-radius:30px;
+  position:relative;
+}
+.item a {
+  position:absolute;
+  bottom: 10px;
+  left: 10px
+}
+.item img {
+  width: 40px;
+  position:absolute;
+  top: 20px;
+  left:20px;
+}
+.item.gpay img {
+  width: 60px;
+}
+.item.phonepe img {
+  width: 40px;
+}
+.item.paytm img {
+  width: 50px;
+  margin-top:-10px;
+}
+.item.bhim img {
+  width: 40px;
+  margin-top:-5px;
+    margin-left:-5px;
+}
+.gpay {
+  background-color: rgba(110, 121, 242, .2);
+  border: 3px solid rgba(110, 121, 242);
+}
+.gpay .button-34{
+  background: rgba(110, 121, 242);
+}
+.phonepe {
+  background-color: rgba(100, 55, 176, .2);
+  border: 3px solid rgba(100, 55, 176);
+}
+.phonepe .button-34{
+  background: rgba(100, 55, 176);
+}
+.paytm{
+  background-color: rgba(0, 183, 232, .2);
+  border: 3px solid rgba(0, 183, 232);
+}
+.paytm .button-34{
+  background: rgba(0, 183, 232);
+}
+.bhim{
+  background-color: rgba(247, 118, 8, .2);
+  border: 3px solid rgba(247, 118, 8);
+}
+.bhim .button-34{
+  background: rgba(247, 118, 8);
+}
+
+.green-column {
+  background-color: green;
+  height: 100px;
+}
+ 
+
+
+/* CSS */
+.button-34 {
+  background: #5E5DF0;
+  border-radius: 999px;
+  width:100px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  text-align:center;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 132px;
+  word-break: break-word;
+  border: 0;
+}
+footer{
+  position:fixed;
+  bottom:-5px;
+}header{
+  position:fixed;
+  top:-5px;
+}
+h3{
+  padding:10px 20px 0px 20px;
+  color:#571ac3;
+}
+*{
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+}
+.footer {
+  position:fixed;
+  bottom:80px;
+  text-align:center;
+  left:50%;
+  transform: translateX(-50%);
+}
+.footer .branding h6{
+  margin-bottom:10px;
+}
+.footer .branding img{
+  height: 20px;
+}
+.footer .certs img{
+  margin-top:20px;
+  height: 20px;
+}
