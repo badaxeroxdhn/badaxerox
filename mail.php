@@ -40,7 +40,7 @@ if (isset($_POST["send"])) {
     " 
     <script> 
      alert('Message was sent successfully!');
-     document.location.href = 'BB.php';
+     document.location.href = 'index.html';
     </script>
     ";
 }
